@@ -4,20 +4,17 @@
 /// <reference path="./subjects/React.ts" />
 /// <reference path="./subjects/Java.ts" />
 
-// Import namespace so we can access the classes directly
-import Subjects = Subjects;
-
-// Create Teacher object with exact type annotation
-export const cTeacher: Subjects.Teacher = {
+// Teacher object
+export const cTeacher: Teacher = {
   firstName: "John",
   lastName: "Doe",
   experienceTeachingC: 10
 };
 
-// Create constants for subjects
-export const cpp = new Subjects.Cpp();
-export const java = new Subjects.Java();
-export const react = new Subjects.React();
+// Subject instances
+export const cpp = new Cpp();
+export const java = new Java();
+export const react = new React();
 
 // Cpp
 console.log("C++");
