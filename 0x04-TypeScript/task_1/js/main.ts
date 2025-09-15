@@ -1,20 +1,36 @@
-// Define the Teacher interface
+// Teacher interface
 interface Teacher {
-  readonly firstName: string;        // only set on init
-  readonly lastName: string;         // only set on init
-  fullTimeEmployee: boolean;         // always required
-  yearsOfExperience?: number;        // optional
-  location: string;                  // always required
-  [key: string]: any;                // allow extra properties
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [key: string]: any;
 }
 
-// Example usage
+// Directors interface extending Teacher
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+// Example teacher
 const teacher3: Teacher = {
-  firstName: "henok",
-  lastName: "lam",
+  firstName: "eyasu",
+  lastName: "teklie",
   fullTimeEmployee: false,
-  location: "jemo",
-  contract: false, // extra property
+  location: "addis ababa",
+  contract: false,
 };
 
-console.log(teacher3);
+console.log("Teacher:", teacher3);
+
+// Example director
+const director1: Directors = {
+  firstName: "henok",
+  lastName: "lam",
+  fullTimeEmployee: true,
+  location: "Addis Ababa",
+  numberOfReports: 5,
+};
+
+console.log("Director:", director1);
