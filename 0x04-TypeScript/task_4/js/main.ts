@@ -6,14 +6,14 @@
 
 import Subjects = Subjects;
 
-// Create Teacher object
+// Create Teacher object with type annotation
 export const cTeacher: Subjects.Teacher = {
   firstName: "John",
   lastName: "Doe",
   experienceTeachingC: 10
 };
 
-// Create constants for subjects
+// Create constants for subjects with const keyword
 export const cpp = new Subjects.Cpp();
 export const java = new Subjects.Java();
 export const react = new Subjects.React();
