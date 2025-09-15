@@ -1,5 +1,4 @@
 namespace Subjects {
-  // Declaration merging: add experienceTeachingReact
   export interface Teacher {
     experienceTeachingReact?: number;
   }
@@ -10,11 +9,11 @@ namespace Subjects {
     }
 
     getAvailableTeacher(): string {
-      const teacher = this.getTeacher();
-      if (teacher.experienceTeachingReact && teacher.experienceTeachingReact > 0) {
-        return `Available Teacher: ${teacher.firstName}`;
+      if (this.teacher.experienceTeachingReact) {
+        return `Available Teacher: ${this.teacher.firstName}`;
+      } else {
+        return "No available teacher";
       }
-      return "No available teacher";
     }
   }
 }
